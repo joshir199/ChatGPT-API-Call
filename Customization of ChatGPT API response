@@ -1,0 +1,17 @@
+Different Ways of Customizing the OpenAI ChatGPT Model responses to be more focused or create.
+
+1. Setting System Level Instructions:
+We can set system-level instructions to guide the behaviour of the model. When we provide the message parameter in the API call, we can set the role as system with specific content we want.
+System-level instructions can help shape the overall style and approach of the generated content.
+e.g : we can instruct the model to think step-by-step, debate pros and cons, or generate creative and imaginative responses.
+     message = [{'role' : 'system', 'content':'You are an creative assitant who answer with pros and cons like a debate'}]
+
+2. Tuning Temperature parameter:
+It influences the randomness of the ChatGPT model's response. We can control the balance between creativity and coherence of the generated response.
+Possible range of temperature is between 0 and 1.
+A higher temperature values (like 0.8) will generate responses that are more diverse and creative but less focused or coherent.
+While, a lower temperature values (like 0.2) will generate responses that are more deterministic and focused which means selecting most likely words.
+
+3. Settting Max Tokens (max_tokens):
+This parameter restricts the length of the generated response. This way, we can control the response length and prevent it from becoming excessively long.
+It also helps in maintaining the focus and coherence of the generated response.
